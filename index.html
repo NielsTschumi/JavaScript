@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+	<meta name="Author" content=""/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+       /* function maDemo(){
+            var noeud = document.getElementById("monTableauPerso");
+            alert(noeud);
+            noeud.style.borderTopWidth = "4px";
+            noeud.style.borderTopColor="green";
+            noeud.style.borderTopStyle="dashed";     
+        }*/
+        function permutation(){
+            var noeudTab = document.getElementById("monTab");
+            var lesLignes = noeudTab.getElementsByTagName("tr");
+            var noeudACopier = lesLignes[1];
+            var cloneNode = noeudACopier.cloneNode(true);
+            noeudTab.appendChild(cloneNode);
+            noeudACopier.parentNode.removeChild(noeudACopier);//prends l'enfait du parents (oui c'est très con...)
+        }
+    </script>
+</head>
+<body>
+   <!-- <p id="MonParagraphe">Affiche "bonjour" si l'heure est avant 18:00</p> -->
+   <h1>DOM JavaScript</h1>
+    <table id="monTab" border="5" width="80%">
+         <tbody>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Classe</th>
+            </tr>
+             <tr>
+                 <td>Dupont</td>
+                 <td>Paul</td>
+                 <td>3a</td>
+             </tr>
+             <tr>
+                 <td>Sauser</td>
+                 <td>Yann</td>
+                 <td>2c</td>
+             </tr>
+             <tr>
+                 <td>Matile</td>
+                 <td>Antoine</td>
+                 <td>2c</td>
+             </tr>
+         </tbody>
+    </table>
+    <!-- <button onclick="permutation()">YOLO</button> Appel la fonction permutation qui prend la prmière ligne ctrl + x -->
+    <script>
+        permutation();
+        
+        
+        /*
+        var noeud = document.getElementById("monTableauPerso");
+        alert(noeud);
+        noeud.style.borderTopWidth = "4px";
+        noeud.style.borderTopColor="green";
+        noeud.style.borderTopStyle="dashed";*/
+        
+        /*
+        var para = document.getElementById("MonParagraphe");
+        alert(para.textContent);
+        
+        if (new Date().getHours() < 18)
+         alert("Bonjour");
+        else
+         alert("Bonsoir");*/
+    </script>
+</body>
+</html>
