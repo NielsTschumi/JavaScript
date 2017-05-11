@@ -6,19 +6,17 @@
 	<meta name="Author" content=""/>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script>
-    function permutation(){
-        var noeudTab = document.getElementById("monTab");
-        var lesLignes = noeudTab.getElementsByTagName("tr");
-        var noeudACopier = lesLignes[0];
-        var cloneNode = noeudACopier.cloneNode(true);
-        noeudTab.appendChild(cloneNode);
-        noeudACopier.parentNode.removeChild(noeudACopier);
-    }
-        function supprimer(){
+        function permutation(){
             var noeudTab = document.getElementById("monTab");
             var lesLignes = noeudTab.getElementsByTagName("tr");
-            var NbLignes = document.getElementById("aSup");
-            lesLignes[NbLignes].removeChild;
+            var noeudACopier = lesLignes[0];
+            var cloneNode = noeudACopier.cloneNode(true);
+            noeudTab.appendChild(cloneNode);
+            noeudACopier.parentNode.removeChild(noeudACopier);
+        }
+        function supprimer(){
+            var x = document.getElementById("aSup").value;
+            document.getElementById("monTab").deleteRow(x); 
         }
     </script>
 </head>
@@ -26,29 +24,27 @@
    <form>
        <input type="text" id="aSup">
        <input type="button" onclick="permutation()" value="copier_coller">
-       <input type="button" onclick="supprimer()" value="supprimer le nb de la ligne">
-   </form>
+       <input type="button" onclick="supprimer()" value="supprimer la ligne nb">
+    </form>
     <table id="monTab" border="5" width="80%">
         <tr>
-            <td>JS</td>
-            <td>JS</td>
-            <td>JS</td>
-            <td>JS</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
         </tr>
         <tr>
-            <td>GS</td>
-            <td>GS</td>
-            <td>GS</td>
-            <td>GS</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
         </tr>
         <tr>
-            <td>YW</td>
-            <td>YW</td>
-            <td>YW</td>
-            <td>YW</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
         </tr>
     </table>
-    
-    
 </body>
 </html>
