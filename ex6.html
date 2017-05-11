@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex6</title>
+	<meta name="Author" content=""/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+    function permutation(){
+        var noeudTab = document.getElementById("monTab");
+        var lesLignes = noeudTab.getElementsByTagName("tr");
+        var noeudACopier = lesLignes[0];
+        var cloneNode = noeudACopier.cloneNode(true);
+        noeudTab.appendChild(cloneNode);
+        noeudACopier.parentNode.removeChild(noeudACopier);
+    }
+        function supprimer(){
+            var noeudTab = document.getElementById("monTab");
+            var lesLignes = noeudTab.getElementsByTagName("tr");
+            var NbLignes = document.getElementById("aSup");
+            lesLignes[NbLignes].removeChild;
+        }
+    </script>
+</head>
+<body>
+   <form>
+       <input type="text" id="aSup">
+       <input type="button" onclick="permutation()" value="copier_coller">
+       <input type="button" onclick="supprimer()" value="supprimer le nb de la ligne">
+   </form>
+    <table id="monTab" border="5" width="80%">
+        <tr>
+            <td>JS</td>
+            <td>JS</td>
+            <td>JS</td>
+            <td>JS</td>
+        </tr>
+        <tr>
+            <td>GS</td>
+            <td>GS</td>
+            <td>GS</td>
+            <td>GS</td>
+        </tr>
+        <tr>
+            <td>YW</td>
+            <td>YW</td>
+            <td>YW</td>
+            <td>YW</td>
+        </tr>
+    </table>
+    
+    
+</body>
+</html>

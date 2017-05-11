@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex5</title>
+	<meta name="Author" content=""/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+        function lafonction(){
+            var textNodea1 = document.createTextNode("Hello");
+            var textNodea2 = document.createTextNode("Hello");
+            var textNodeb1 = document.createTextNode("Hello");
+            var textNodeb2 = document.createTextNode("Hello");
+            var textNodec1 = document.createTextNode("Hello");
+            var textNodec2 = document.createTextNode("Hello");
+            var table = document.createElement("table");
+            var tr1 = document.createElement("tr");
+            var tr2 = document.createElement("tr");
+            var tr3 = document.createElement("tr");
+            var tda1 = document.createElement("td");
+            var tda2 = document.createElement("td");
+            var tdb1 = document.createElement("td");
+            var tdb2 = document.createElement("td");
+            var tdc1 = document.createElement("td");
+            var tdc2 = document.createElement("td");
+            document.getElementById("contenu").appendChild(table);
+            table.appendChild(tr1);
+            table.appendChild(tr2);
+            table.appendChild(tr3);
+            tr1.appendChild(tda1);
+            tr1.appendChild(tda2);
+            tr2.appendChild(tdb1);
+            tr2.appendChild(tdb2);
+            tr3.appendChild(tdc1);
+            tr3.appendChild(tdc2);
+            tda1.appendChild(textNodea1);
+            tda2.appendChild(textNodea2);
+            tdb1.appendChild(textNodeb1);
+            tdb2.appendChild(textNodeb2);
+            tdc1.appendChild(textNodec1);
+            tdc2.appendChild(textNodec2);
+        }
+    </script>
+    
+</head>
+<body>
+    <form>
+        <input type="button" onclick="lafonction()" value="Button">
+    </form>
+    <div id="contenu">
+        
+        
+        
+        
+    </div>
+</body>
+</html>

@@ -7,18 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript">
         function lafonction(){
-            var texte = document.getElementById("saisie");
-            alert(texte);
+            var texteArriver = document.getElementById("copier").value;
+            alert("selection :"+texteArriver);
         }
     </script>
     
 </head>
 <body>
     <form>
-       <input type="text" id="saisie">
-        <input type="button" onclick="lafonction()" value="Salutation">
-        
-        
+       <input type="text" id="copier">
+        <input type="button" onclick="lafonction()" value="Copier_Coller">
     </form>
     <p>Appelle une fonction</p>
 

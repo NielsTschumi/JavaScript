@@ -2,20 +2,23 @@
 <html lang="">
 <head>
     <meta charset="UTF-8">
-    <title>Ex3 Js</title>
+    <title>Ex4</title>
 	<meta name="Author" content=""/>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script>
         function lafonction(){
-            var texteArriver = document.getElementById("copier").value;
-            document.getElementById("coller").value = texteArriver;   
+            var number1 = document.getElementById("ch1").value;
+            var number2 = document.getElementById("ch2").value;
+            var resultat = parseFloat(number1) + parseFloat(number2);
+            document.getElementById("coller").value = resultat;   
         }
     </script>
     
 </head>
 <body>
     <form>
-       <input type="text" id="copier">
+       <input type="text" id="ch1">
+       <input type="text" id="ch2">
         <input type="button" onclick="lafonction()" value="Copier_Coller">
         <input type="text" id="coller">
     </form>
